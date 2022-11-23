@@ -60,6 +60,9 @@ apache_restart_state: restarted
 # if you want to upgrade or switch versions using a new repo.
 apache_packages_state: present
 
+enable_apache_lb: false
+load_balancer_is_required: false
+
 loadbalancer_name: "myapp1"
-web1: "172.31.23.254"
-web2: "172.31.16.9"
+web1: "172.31.95.101 weight=3"
+web2: "172.31.86.249 weight=3"
