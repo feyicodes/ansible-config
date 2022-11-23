@@ -44,4 +44,8 @@
   service:
     name: "{{ apache_service }}"
     state: "{{ apache_state }}"
-    enabled: "{{ apache_enabled }}"
+    enabled: true
+
+# ******************************************************************************
+- name: configure-tooling-website
+  include_tasks: "configure-tooling-website.yml"
