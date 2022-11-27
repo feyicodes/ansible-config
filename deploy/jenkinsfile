@@ -2,6 +2,14 @@ pipeline {
   agent any
 
   stages {
+      stage("Initial cleanup") {
+          steps {
+            dir("${WORKSPACE}") {
+              deleteDir()
+            }
+          }
+        }
+
       stage('Build') {
           steps {
             script {
@@ -17,5 +25,30 @@ pipeline {
             }
             }
           }
+
+stage('Package') {
+          steps {
+            script {
+                sh 'echo "Package"'
+            }
+            }
+          }
+
+stage('Deploy') {
+          steps {
+            script {
+                sh 'echo "Deploy to Dev"'
+;            }
+            }
+          }
+
+      stage('cleanup Up'){
+          steps {
+              cleanWs()
+            }
+            }
+
+
         }
         }
+
