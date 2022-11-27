@@ -38,13 +38,14 @@ stage('Deploy') {
           steps {
             script {
                 sh 'echo "Deploy to Dev"'
-            }
+;            }
             }
           }
 
-      stage("cleanup Up")
+      stage('cleanup Up'){
           steps {
               cleanWs()
+            }
             }
 
 
