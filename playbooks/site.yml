@@ -1,6 +1,5 @@
 ---
-
-- hosts: all
+- hosts: db
 - name: database assignment
   ansible.builtin.import_playbook: ../static-assignments/database.yml
 
