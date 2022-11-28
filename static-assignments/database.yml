@@ -1,0 +1,7 @@
+---
+- hosts: db
+  become: true
+  roles:
+     - mysql
+Footer
+© 2022 GitHub, Inc.
